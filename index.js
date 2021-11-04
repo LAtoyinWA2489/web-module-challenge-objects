@@ -15,9 +15,15 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    // const newItem = {
+    //   name,
+    //   price,
+    //   category,
+    // }
+    // return createMenuItem
 }
+// console.log('Task 1a', createMenuItem('taco', 8, 'Lunch'));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -47,10 +53,17 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
+  discount: function(customer){
+              let burgerCost = this.price;
+              if(customer === 'teacher' || customer === 'student'){
+                return burgerCost - (burgerCost* .25);
+              }else if(customer === 'public'){
+                return burgerCost - (burgerCost* .10);
+              }
+            }
 }
 
-
+console.log('Task 2', burger.discount('teacher'));
 
 ///////////////Reviews (MVP)///////////////////
 const reviews = [
@@ -68,7 +81,7 @@ const reviews = [
 Using the reviews array above:
   1. log only Julius' feedback to the console - no function needed 
 */
-
+console.log(reviews[5].feedback);
 
 
 
